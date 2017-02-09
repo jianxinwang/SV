@@ -54,8 +54,8 @@ for vcf in vcfs:
 	
 				try:	
 					info_fields = tmp[7].split(";")
-				except ValueError:
-					print >> sys.stderr
+				except ValueError as e:
+					print(e, file=sys.stderr)
 					continue
 			
 				for item in info_fields:
