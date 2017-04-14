@@ -494,7 +494,7 @@ sub make_commandline {
 		$params = join(' ', $sample_name . '.bam', $input);
 		$cmd = join( ' ', 'sambamba merge',  $params );
 	} elsif ($step eq 'sv'){
-		$params = join(' ' , $input, '-R', $ref, '-g -d -A', '-t', $nct, '-x', $self->opts->{exclude_intervals});
+		$params = join(' ' , $input, '-R', $ref, '-g -d -A -P', '-t', $nct, '-x', $self->opts->{exclude_intervals});
 		$cmd = join(' ', 'speedseq', 'sv', $params);
 	}
     
